@@ -1,23 +1,27 @@
 package com.tj.a200190427_adroid_practice;
 
+import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.tj.a200190427_adroid_practice.databinding.ActivitySpinerPracticeBinding;
 import com.tj.a200190427_adroid_practice.datas.PizzaStore;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SpinnerPracticeActivity extends AppCompatActivity {
+    ActivitySpinerPracticeBinding act;
 
     List<PizzaStore> pizzaStores = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_spiner_practice);
+        act = DataBindingUtil.setContentView(this, R.layout.activity_spiner_practice);
 
         fillPizzaStores();
+
     }
 
     void fillPizzaStores(){
