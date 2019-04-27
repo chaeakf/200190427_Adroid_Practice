@@ -35,12 +35,26 @@ public class SpinnerPracticeActivity extends AppCompatActivity {
         act.pizzaStoreSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(SpinnerPracticeActivity.this, String.format("%s 선택", pizzaStores.get(position).storeName),Toast.LENGTH_SHORT);
+                Toast.makeText(SpinnerPracticeActivity.this, String.format("%s 선택", pizzaStores.get(position).storeName),Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
+            }
+        });
+
+        act.confirmBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                스피너에 어떤 값이 선택되어있는지? 토스트로 출력
+//                피자 스피너가 선택된 위치를 받아서 저장
+                int selectedPosition =  act.pizzaStoreSpinner.getSelectedItemPosition();
+
+//                그가게 이름
+                String selectedPizzaStoreName = pizzaStores.get(selectedPosition).storeName;
+
+                Toast.makeText(SpinnerPracticeActivity.this, String.format("현재 선택된 가게이름:%s",selectedPizzaStoreName), Toast.LENGTH_SHORT).show();
             }
         });
 
