@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.tj.a200190427_adroid_practice.adapters.PizzaStoreAdapter;
 import com.tj.a200190427_adroid_practice.databinding.ActivitySpinerPracticeBinding;
 import com.tj.a200190427_adroid_practice.datas.PizzaStore;
 
@@ -11,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SpinnerPracticeActivity extends AppCompatActivity {
+    PizzaStoreAdapter pizzaStoreAdapter;
+
     ActivitySpinerPracticeBinding act;
 
     List<PizzaStore> pizzaStores = new ArrayList<>();
@@ -21,6 +24,10 @@ public class SpinnerPracticeActivity extends AppCompatActivity {
         act = DataBindingUtil.setContentView(this, R.layout.activity_spiner_practice);
 
         fillPizzaStores();
+
+        pizzaStoreAdapter = new PizzaStoreAdapter(SpinnerPracticeActivity.this, pizzaStores);
+
+        act.pizzaStoreSpinner.setAdapter(pizzaStoreAdapter);
 
     }
 
