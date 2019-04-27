@@ -27,4 +27,82 @@
 
     </FrameLayout>
 
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="1번째 \n가로 스크롤"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="2번째 \n가로 스크롤"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="3번째 \n가로 스크롤"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="4번째 \n가로 스크롤"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="5번째 \n가로 스크롤"/>
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="250dp"
+                android:text="첫번째 텍스트뷰"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="250dp"
+                android:text="두번째 텍스트뷰"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="250dp"
+                android:text="세번째 텍스트뷰"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="250dp"
+                android:text="네번째 텍스트뷰"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </LinearLayout>
