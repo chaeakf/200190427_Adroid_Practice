@@ -45,7 +45,6 @@ public class PizzaStoreAdapter extends ArrayAdapter<PizzaStore> {
 
         nameTxt.setText(storeData.storeName);
 
-
         return row;
     }
 
