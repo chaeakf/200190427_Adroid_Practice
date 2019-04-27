@@ -50,4 +50,26 @@ public class PizzaStoreAdapter extends ArrayAdapter<PizzaStore> {
 
         return row;
     }
+
+    @Override
+    public View getDropDownView(int position,  View convertView, ViewGroup parent) {
+        View row = convertView;
+
+        if (row == null) {
+            row = inf.inflate(R.layout.pizza_spinner_list_item,null);
+        }
+
+        PizzaStore storeData = mlist.get(position);
+
+        ImageView logoImgView = row.findViewById(R.id.logoImgView);
+        TextView nameTxt = row.findViewById(R.id.nameTxt);
+        TextView locationTxt = row.findViewById(R.id.locationTxt);
+        TextView openTimeTxt = row.findViewById(R.id.openTiemTxt);
+
+        nameTxt.setText(storeData.storeName);
+        locationTxt.setText(String.format("(%s)",storeData.location));
+        openTimeTxt.setText(storeData.openTime);
+
+        return row;
+    }
 }
